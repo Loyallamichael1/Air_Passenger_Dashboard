@@ -14,37 +14,3 @@ This dashboard provides an interactive visualization of air passenger data, allo
 The dashboard is deployed on Streamlit and accessible at the following link:
 👉 (https://data-science-resource-mbwst8docuufvv2c7la2nu.streamlit.app/)
 
-## How to Run Locally
-To run this dashboard locally, follow these steps:
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/Loyallamichael1/Air_Passenger_Dashboard.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd Air_Passenger_Dashboard
-   ```
-3. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-4. Run the Streamlit app:
-   ```sh
-   streamlit run app.py
-   ```
-
-## Dataset
-The dataset used in this dashboard is `AirP.csv`, which contains monthly air passenger numbers.
-
-## Repository Structure
-```
-Air_Passenger_Dashboard/
-│-- app.py                  # Main Streamlit dashboard script
-│-- AirP.csv                # Dataset file
-│-- requirements.txt        # Dependencies
-│-- README.md               # Project documentation
-```
-
-
-
-
