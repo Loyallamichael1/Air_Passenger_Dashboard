@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -50,16 +49,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# 📌 Load the dataset
-file_path = "https://raw.githubusercontent.com/[Loyallamichael1]/[Air_Passenger_Dashboard]/main/AirP.csv" 
-df = pd.read_csv(file_path)
+# 📌 Load the dataset (Fixing incorrect file path format)
+file_path = "https://raw.githubusercontent.com/Loyallamichael1/Air_Passenger_Dashboard/main/AirP.csv" 
 
-
-if not os.path.exists(file_path):
-    st.error(f"❌ Error: File not found at {file_path}. Please check the path.")
+try:
+    df = pd.read_csv(file_path)
+except Exception as e:
+    st.error(f"❌ Error: Unable to load dataset. Check file path or format.\n\n{e}")
     st.stop()
-
-df = pd.read_csv(file_path)
 
 # 📌 Convert 'Month' to datetime format for time series analysis
 if 'Month' in df.columns:
@@ -136,3 +133,7 @@ st.markdown("""
 - **Why a Table?**  
   - Allows users to see specific values and details based on selected filters.  
 """)
+
+
+
+
