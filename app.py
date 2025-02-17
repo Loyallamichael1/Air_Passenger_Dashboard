@@ -51,7 +51,9 @@ st.markdown(
 )
 
 # 📌 Load the dataset
-file_path = r"C:\Users\Harri\Documents\Data-Science-Resources\Last Assigment\AirPassengerDashboard\AirP.csv"
+file_path = "https://raw.githubusercontent.com/[Loyallamichael1]/[Air_Passenger_Dashboard]/main/AirP.csv" 
+df = pd.read_csv(file_path)
+
 
 if not os.path.exists(file_path):
     st.error(f"❌ Error: File not found at {file_path}. Please check the path.")
